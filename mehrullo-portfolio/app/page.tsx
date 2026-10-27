@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -26,7 +25,7 @@ const projects = [
     number: "03",
     name: "Shifokorga qabulyozish",
     description: "Shifokor qabuliga yozilish uchun veb-loyiha.",
-    url: "https://shifokogaqabulyozish.lovable.app",
+    url: "https://shifokorgaqabulyozish.lovable.app",
     tech: "Web Application",
   },
 ];
@@ -75,21 +74,21 @@ export default function HomePage() {
 
   const page = darkMode
     ? {
-      bg: "bg-[#080812] text-white",
-      header: "border-white/10 bg-[#080812]/90",
-      muted: "text-slate-400",
-      card: "border-cyan-400/20 bg-[#111324] hover:border-cyan-300/60",
-      button: "border-white/20 hover:bg-white/10",
-      grid: "rgba(0,217,255,0.045)",
-    }
+        bg: "bg-[#080812] text-white",
+        header: "border-white/10 bg-[#080812]/90",
+        muted: "text-slate-400",
+        card: "border-cyan-400/20 bg-[#111324] hover:border-cyan-300/60",
+        button: "border-white/20 hover:bg-white/10",
+        grid: "rgba(0,217,255,0.045)",
+      }
     : {
-      bg: "bg-slate-50 text-slate-900",
-      header: "border-slate-200 bg-white/90",
-      muted: "text-slate-600",
-      card: "border-slate-200 bg-white hover:border-blue-400 shadow-sm",
-      button: "border-slate-300 hover:bg-slate-100",
-      grid: "rgba(37,99,235,0.055)",
-    };
+        bg: "bg-slate-50 text-slate-900",
+        header: "border-slate-200 bg-white/90",
+        muted: "text-slate-600",
+        card: "border-slate-200 bg-white hover:border-blue-400 shadow-sm",
+        button: "border-slate-300 hover:bg-slate-100",
+        grid: "rgba(37,99,235,0.055)",
+      };
 
   return (
     <main
@@ -156,8 +155,9 @@ export default function HomePage() {
         className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-[1.3fr_0.7fr] md:py-28"
       >
         <div
-          className={`pointer-events-none absolute left-1/4 top-20 -z-0 h-64 w-64 rounded-full blur-[100px] ${darkMode ? "bg-blue-600/20" : "bg-cyan-400/15"
-            }`}
+          className={`pointer-events-none absolute left-1/4 top-20 -z-0 h-64 w-64 rounded-full blur-[100px] ${
+            darkMode ? "bg-blue-600/20" : "bg-cyan-400/15"
+          }`}
         />
 
         <div className="relative z-10">
@@ -190,15 +190,13 @@ export default function HomePage() {
               Loyihalarimni ko‘rish ↗
             </a>
 
-
             <a
               href="/mehrullo-cv.pdf"
               download="Mehrullo-CV.pdf"
-              className="rounded-xl border px-5 py-3"
+              className={`rounded-xl border px-5 py-3 transition ${page.button}`}
             >
               ↓ CV yuklab olish
             </a>
-
           </div>
 
           <div className="mt-4 flex flex-wrap gap-3">
@@ -239,10 +237,13 @@ export default function HomePage() {
           <span className="absolute right-5 top-7 h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_20px_#00d9ff]" />
           <span className="absolute bottom-10 left-1 h-3 w-3 rounded-full bg-purple-400 shadow-[0_0_20px_#a855f7]" />
 
-          <div className={`absolute -bottom-3 rounded-lg border px-4 py-2 text-xs tracking-widest ${darkMode
-              ? "border-cyan-400/30 bg-[#0b1020] text-cyan-200"
-              : "border-blue-300 bg-white text-blue-700"
-            }`}>
+          <div
+            className={`absolute -bottom-3 rounded-lg border px-4 py-2 text-xs tracking-widest ${
+              darkMode
+                ? "border-cyan-400/30 bg-[#0b1020] text-cyan-200"
+                : "border-blue-300 bg-white text-blue-700"
+            }`}
+          >
             DEVELOPER // MM
           </div>
         </div>
@@ -284,8 +285,11 @@ export default function HomePage() {
                 TECH_0{index + 1}
               </p>
               <h3 className="mt-3 font-bold">{skill}</h3>
-              <div className={`mt-4 h-1 overflow-hidden rounded-full ${darkMode ? "bg-white/10" : "bg-slate-200"
-                }`}>
+              <div
+                className={`mt-4 h-1 overflow-hidden rounded-full ${
+                  darkMode ? "bg-white/10" : "bg-slate-200"
+                }`}
+              >
                 <div className="h-full w-2/3 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500" />
               </div>
             </div>
@@ -390,9 +394,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className={`border-t px-5 py-7 text-center text-sm ${page.muted} ${darkMode ? "border-cyan-300/10" : "border-slate-200"
-        }`}>
-        <p>© {new Date().getFullYear()} Mehrullo Mirzaakbarov</p>
+      <footer
+        className={`border-t px-5 py-7 text-center text-sm ${
+          page.muted
+        } ${
+          darkMode ? "border-cyan-300/10" : "border-slate-200"
+        }`}
+      >
+        <p>© 2026 Mehrullo Mirzaakbarov</p>
         <p className="mt-2 tracking-widest text-cyan-600">
           DESIGNED FOR THE FUTURE_
         </p>
